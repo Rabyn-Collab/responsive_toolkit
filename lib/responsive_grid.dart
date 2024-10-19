@@ -231,7 +231,7 @@ class _RunMetrics {
 /// while wrapping columns based on their responsive grid properties.
 ///
 /// By default, when using `Breakpoints`, the layout is based on the
-/// `MediaQuery.of(context).size.width`.
+/// `MediaQuery.sizeOf(context).width`.
 class ResponsiveRow extends StatelessWidget {
   /// A list of [ResponsiveColumn] objects which define the layout and children
   /// of the row.
@@ -330,7 +330,7 @@ class ResponsiveRow extends StatelessWidget {
   /// Whether to choose breakpoints for its columns based on incoming
   /// constraints.
   ///
-  /// Defaults to `false` (uses `MediaQuery.of(context).size.width`).
+  /// Defaults to `false` (uses `MediaQuery.sizeOf(context).width`).
   final bool breakOnConstraints;
 
   /// Creates a row of responsive columns
@@ -352,7 +352,7 @@ class ResponsiveRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _ResponsiveRow(
-      screenSize: breakOnConstraints ? null : MediaQuery.of(context).size,
+      screenSize: breakOnConstraints ? null : MediaQuery.sizeOf(context),
       columns: columns,
       alignment: alignment,
       spacing: spacing,
