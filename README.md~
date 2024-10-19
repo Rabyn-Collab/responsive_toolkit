@@ -192,7 +192,7 @@ final int fontSize = Breakpoints(
   md: 14,
   xl: 18,
   custom: {456: 12},
-).choose(MediaQuery.sizeOf(context).width);
+).choose(MediaQuery.of(context).size.width);
 ```
 
 ### Controlling the breakpoint axis
