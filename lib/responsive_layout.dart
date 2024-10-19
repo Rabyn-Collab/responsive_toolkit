@@ -69,7 +69,7 @@ class ResponsiveLayout extends StatelessWidget {
     BaseBreakpoints<T?> breakpoints, {
     Axis axis = Axis.horizontal,
   }) {
-    final Size size = MediaQuery.of(context).size;
+    final Size size = MediaQuery.sizeOf(context);
     return breakpoints.choose(
       axis == Axis.horizontal ? size.width : size.height,
     )!;
@@ -77,7 +77,7 @@ class ResponsiveLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    final Size size = MediaQuery.sizeOf(context);
     return _breakpoints.choose(
       axis == Axis.horizontal ? size.width : size.height,
     )!(context);
