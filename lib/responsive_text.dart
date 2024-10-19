@@ -52,7 +52,7 @@ class FluidText extends Text {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
+    final width = MediaQuery.sizeOf(context).width;
 
     return DefaultTextStyle.merge(
       style: _style.merge(TextStyle(
